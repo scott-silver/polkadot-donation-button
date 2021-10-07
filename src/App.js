@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  Container,
+} from '@bootstrap-styled/v4';
+import BootstrapProvider from '@bootstrap-styled/provider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BootstrapProvider>
+      <Container className="py-2">
+        <div className="bg-primary">Header</div>
+        <div className="w-25 bg-warning d-inline-block">Sidebar</div>
+        <div className="w-75 bg-info d-inline-block">Body</div>
+      </Container>
+    </BootstrapProvider>
   );
 }
 
