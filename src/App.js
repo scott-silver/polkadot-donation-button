@@ -31,7 +31,7 @@ function App() {
               <Label>
                 Your donation button
               </Label>
-              <div className="mb-2">
+              <div className="mb-5">
                 <Button
                   size="sm"
                   color="warning"
@@ -39,11 +39,11 @@ function App() {
                   onClick={() => onClick()}
                 >Donate with Polkadot</Button>
               </div>
-              <Label>
+              <Label className="mb-1">
                 Copy the following code into your web page
               </Label>
-              <pre className="border p-2 bg-light" style={{overflowX: "scroll"}}>
-                <code>
+              <pre className="border p-2 bg-light mt-1 small" style={{overflowX: "scroll", lineHeight: 1.2, fontSize: "14px"}}>
+                <code className="small">
 // include these elements in the body of your page {"\n"}
 &lt;div id="polkadot-modal-root"&gt;&lt;/div&gt;{"\n"}
 
