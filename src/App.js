@@ -15,6 +15,12 @@ function App() {
   const [address, setAddress] = useState("");
   const [codeBlockIsVisible, setCodeBlockIsVisible] = useState(false);
 
+  const onClick = () => {
+    window.initPolkadotDonationButton({
+      recipientPolkadotAddress: address
+    })
+  }
+
   return (
     <BootstrapProvider theme={{}}>
       <Container className="py-2">
@@ -22,11 +28,22 @@ function App() {
           <CardBlock>
             {codeBlockIsVisible ?
              <>
+              <Label>
+                Your donation button
+              </Label>
+              <div className="mb-2">
+                <Button
+                  size="sm"
+                  color="warning"
+                  style={{backgroundColor: "#FF8C00"}}
+                  onClick={() => onClick()}
+                >Donate with Polkadot</Button>
+              </div>
+              <Label>
+                Copy the following code into your web page
+              </Label>
               <pre className="border p-2 bg-light" style={{overflowX: "scroll"}}>
                 <code>
-
-// copy this code block into your website {"\n"}
-{"\n"}
 // include these elements in the body of your page {"\n"}
 &lt;div id="polkadot-modal-root"&gt;&lt;/div&gt;{"\n"}
 
